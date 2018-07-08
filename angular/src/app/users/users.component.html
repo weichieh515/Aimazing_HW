@@ -1,0 +1,15 @@
+<div style="text-align:center">
+  <button type="button" class="btn btn-outline-primary" routerLink="/user-edit/">
+    Add</button>
+</div>
+
+<div class="list-group" *ngFor="let user of users">
+  <a href="#" routerLink="/user-edit/{{ user._id }}" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ user.name }}</h5>
+    </div>
+    <p class="mb-1">{{ user.gender }} </p>
+    <p class="mb-1">{{ user.birthdate | date:'longDate' }} </p>
+  </a>
+
+</div>

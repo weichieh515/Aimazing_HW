@@ -1,0 +1,26 @@
+{
+  "name": "aimazing_hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm i && cd angular && npm i && ng build && cd ../ && node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jack.hsu515",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.1",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
