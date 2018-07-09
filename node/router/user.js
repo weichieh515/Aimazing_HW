@@ -3,7 +3,7 @@ const express = require('express'),
 
 const User = require('../model/user');
 
-router.get('/', (req, res) => {
+router.get('/list', (req, res) => {
     User.find((err, result) => { resultHandle(err, result, res) })
 });
 

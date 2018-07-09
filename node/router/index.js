@@ -9,7 +9,6 @@ const userRouter = require('./user'),
 
 require('../controller/passport');
 
-// router.use('/token', passport.authenticate('jwt', {session: false}), ctrlAuth.renewToken)
 router.use('/user', passport.authenticate('jwt', {session: false}), userRouter);
 router.post('/login', ctrlAuth.login);
 router.post('/register', ctrlAuth.register);
