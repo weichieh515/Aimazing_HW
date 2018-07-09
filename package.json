@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm i && cd angular && npm i && ng build && cd ../ && node index",
+    "start": "npm install && node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jack.hsu515",
