@@ -53,7 +53,6 @@ export class UserEditComponent implements OnInit {
         this.user = user;
         this.returnToList();
       });
-
   }
 
   deleteUser(): void {
@@ -62,13 +61,12 @@ export class UserEditComponent implements OnInit {
     this.returnToList();
   }
 
-  
+
   onDateChange(date: string) {
     this.user.birthdate = new Date(date);
   }
-  
+
   private returnToList(): void {
     this.router.navigate(['/']);
   }
-
 }

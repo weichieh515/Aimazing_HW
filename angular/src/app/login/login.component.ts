@@ -23,6 +23,11 @@ export class LoginComponent implements OnInit {
       .subscribe(token => {
         this.authServie.saveToken(token);
         this.router.navigate(['/']);
+      }, err => {
+        if (err.status == 401) {
+          this.manger = { username: '', password: '' };
+          alert("username or password is incorrect !");
+        }
       });
   }
 

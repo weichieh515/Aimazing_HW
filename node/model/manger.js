@@ -27,11 +27,14 @@ MangerSchema.methods.validPassword = function (password) {
 MangerSchema.methods.generateJwt = function () {
     let expiry = new Date();
     expiry.setMinutes(expiry.getMinutes() + 20);
-    return jwt.sign({
-        _id: this._id,
-        username: this.username,
-        exp: parseInt(expiry.getTime() / 1000),
-    }, "THIS_IS_SECRET"); 
+    return {
+        token: jwt.sign({
+            _id: this._id,
+            username: this.username,
+            exp: parseInt(expiry.getTime() / 1000),
+        }, "THIS_IS_SECRET"),
+        exp: expiry.getTime()
+    };
 };
 
 module.exports = mongoose.model('Manger', MangerSchema);

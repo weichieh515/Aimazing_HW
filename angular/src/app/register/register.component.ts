@@ -28,6 +28,12 @@ export class RegisterComponent implements OnInit {
       .subscribe(token => {
         this.authServie.saveToken(token);
         this.router.navigate(['/']);
+      }, err => {
+        if (err.status == 409) {
+          this.manger = { username: '', password: '' };
+          this.password_confirm = '';
+          alert("username already exits");
+        }
       });
   }
 

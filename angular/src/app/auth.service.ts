@@ -30,7 +30,7 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     if(!this.getToken()) return false;
-    return true;
+    return this.getToken().exp > Date.now();
   }
 
   private getToken(): Token {
