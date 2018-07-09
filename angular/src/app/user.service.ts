@@ -6,7 +6,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { User } from './user';
 
-const userUrl = 'http://localhost:5000/user';
+const userUrl = '/user';
 
 
 

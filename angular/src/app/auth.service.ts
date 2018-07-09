@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { Manger } from './manger';
 import { Token } from './token';
 
-const baseUrl = 'http://localhost:5000';
+const baseUrl = '';
 
 @Injectable({
   providedIn: 'root'
